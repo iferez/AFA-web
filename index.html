@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/estilos.css" />
+
+    <title>AFA Store</title>
+  </head>
+  <body>
+    <section id="principal">
+      <div class="circle"></div>
+      <header>
+        <a href="#"><img src="/img/logo.png" class="logo" alt="Lofo AFA" /></a>
+        <div class="menu" onclick="toggleMenu();"></div>
+        <ul class="navigation">
+          <li><a href="#">Inicio</a></li>
+          <li><a href="https://www.adidas.com.ar/argentina">AFA</a></li>
+          <li><a href="https://www.adidas.com.ar/river_plate">River</a></li>
+          <li><a href="https://www.adidas.com.ar/search?q=boca">Boca</a></li>
+          <li>
+            <a href="https://www.linkedin.com/in/iv%C3%A1n-ferez-417935186/"
+              >Contacto</a
+            >
+          </li>
+        </ul>
+      </header>
+      <div class="contenedor">
+        <div class="textoCaja">
+          <h2>Presentación de la nueva camiseta <span>AFA</span></h2>
+          <p>
+            Dedicada a la tierra que nos hace soñar. <br />
+            La camiseta que representa un país que vive y respira fútbol,
+            refleja la unión que genera en todo el mundo tanto en el juego como
+            en los estadios y en las calles.
+          </p>
+          <a href="https://www.adidas.com.ar/">Mas información</a>
+        </div>
+        <div class="imgCaja">
+          <img src="/img/afatitular.png" class="afa" alt="" />
+        </div>
+      </div>
+
+      <ul class="thumb">
+        <li>
+          <img
+            src="/img/afatitular.png"
+            onclick="imgSlider('/img/afatitular.png');changeCircleColor('#36adf1')"
+          />
+        </li>
+        <li>
+          <img
+            src="/img/afasuplente.png"
+            onclick="imgSlider('/img/afasuplente.png');changeCircleColor('#58D68D')"
+          />
+        </li>
+      </ul>
+      <ul class="redes">
+        <li>
+          <a href="https://www.facebook.com/AFASeleccionArgentina/"
+            ><img src="/img/facebook.png" alt=""
+          /></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/afaseleccion/?hl=es-la"
+            ><img src="/img/instagram.png" alt=""
+          /></a>
+        </li>
+        <li>
+          <a href="https://twitter.com/argentina?lang=es"
+            ><img src="/img/twitter.png" alt=""
+          /></a>
+        </li>
+      </ul>
+    </section>
+
+    <main>
+      <div class="separador"></div>
+
+      <div class="trofeo">
+        <img src="/img/messicopa.jpg" alt="" />
+
+        <div class="trofeoinfo">
+          <p>
+            <strong>Copa America 2021</strong> <br /><br />
+            Un país que vive y respira fútbol, refleja la unión que genera en
+            todo el mundo tanto en el juego como en los estadios y en las
+            calles. En nuestro país, de Ushuaia a La Quiaca, el fútbol
+            trasciende las fronteras de cada provincia argentina llegando a cada
+            uno de sus rincones y embanderándonos detrás de nuestro equipo. El
+            escudo siempre en el pecho!
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <section id="secundaria">
+      <div class="productos">
+        <div class="cartas">
+          <div class="imgProducto">
+            <img src="/img/botin2.png" alt="" />
+            <h2>PREDATOR</h2>
+          </div>
+          <div class="content">
+            <div class="size">
+              <h3>Size :</h3>
+              <span>7</span>
+              <span>8</span>
+              <span>9</span>
+              <span>10</span>
+            </div>
+            <div class="color">
+              <h3>Color :</h3>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <a href="#">Compra ahora</a>
+          </div>
+        </div>
+        <div class="cartas">
+          <div class="imgProducto">
+            <img src="/img/botin1.png" alt="" />
+            <h2>COPA</h2>
+          </div>
+          <div class="content">
+            <div class="size">
+              <h3>Size :</h3>
+              <span>7</span>
+              <span>8</span>
+              <span>9</span>
+              <span>10</span>
+            </div>
+            <div class="color">
+              <h3>Color :</h3>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <a href="#">Compra ahora</a>
+          </div>
+        </div>
+        <div class="cartas">
+          <div class="imgProducto">
+            <img src="/img/botin3.png" alt="" />
+            <h2>GHOSTED</h2>
+          </div>
+          <div class="content">
+            <div class="size">
+              <h3>Size :</h3>
+              <span>7</span>
+              <span>8</span>
+              <span>9</span>
+              <span>10</span>
+            </div>
+            <div class="color">
+              <h3>Color :</h3>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <a href="#">Compra ahora</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="banner">
+      <video src="/video/videobanner2.mp4" autoplay muted loop></video>
+      <h2>Argentina 2021</h2>
+    </div>
+
+
+    <script type="text/javascript">
+      function imgSlider(anything) {
+        document.querySelector(".afa").src = anything;
+      }
+      function changeCircleColor(color) {
+        const circle = document.querySelector(".circle");
+        circle.style.background = color;
+      }
+
+      function toggleMenu() {
+        var menuToggle = document.querySelector(".menu");
+        var navigation = document.querySelector(".navigation");
+        menuToggle.classList.toggle("active");
+        navigation.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
